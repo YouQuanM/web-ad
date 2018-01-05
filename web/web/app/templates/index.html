@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Flasky{% endblock %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylestyle.css') }}">
+{% block page_content %}
+    <div class="page-header">
+        <h1>Hello, {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}匿名用户{% endif %}!</h1>
+    </div>
+    <div class="row">
+        <form method="post">
+            {{ form.hidden_tag() }}
+{#            {{ form.type(name='type',style="floag:left;list-style:none;display:inline;") }}#}
+                    <tr id="nav-tr">
+                        {% for typefiels in form.type %}
+                            <td>
+                                <button type="button" class="btn btn-default btn-yh" onclick="go(callback())" style="margin: 0.6%">{{ typefiels(style="display:none;") }}{{ typefiels.label(style="font-size:18px;") }}</button>
+                            </td>
+                        {% endfor %}
+                        <button id="btn2" style="visibility:hidden;">{{ form.submit() }}</button>
+                    </tr>
+        </form>
+    </div>
+    <script>
+
+            function go() {
+                document.getElementsByClassName("btn-nav-1").click()
+            }
+            function callback() {
+                document.getElementById("btn2").click()
+            }
+
+    </script>
+    {% include '_movie_list.html' %}
+{% endblock %}

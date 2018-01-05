@@ -1,0 +1,135 @@
+/*全部*/
+
+li{
+    list-style-type: none;
+}
+.rating{
+    width: 200px;
+    height: 26px;
+    padding-left: 0;
+}
+.rating-item{
+    float: left;
+    width: 30px;
+    height: 30px;
+    background: url(../images/star.png)no-repeat;
+    cursor: pointer;
+}
+.star-p{
+    display: inline;
+}
+.gudie{
+    padding:20px;
+    text-align: center;
+}
+.gundonglan{
+    text-align: center;
+}
+#jumbotron2{
+    margin: 10%;
+}
+#login1{
+    color: black;
+}
+#search{
+    float: right;
+}
+/*图片*/
+.media-object{
+    width: 128px;
+    height: 128px;
+}
+.media{
+    margin: 3%;
+}
+
+
+.profile-thumbnail {
+    position: absolute;
+}
+.profile-header {
+    min-height: 260px;
+    margin-left: 280px;
+}
+.comment-user{
+    margin-left: 3%;
+}
+div.pagination {
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+ul.comments {
+    list-style-type: none;
+    padding: 0px;
+    margin: 16px 0px 0px 0px;
+}
+ul.comments li.comment {
+    margin-left: 32px;
+    padding: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+ul.comments li.comment:nth-child(1) {
+    border-top: 1px solid #e0e0e0;
+}
+ul.comments li.comment:hover {
+    background-color: #f0f0f0;
+}
+div.comment-date {
+    float: right;
+}
+div.comment-author {
+    font-weight: bold;
+}
+div.comment-thumbnail {
+    position: absolute;
+}
+div.comment-content {
+    margin-left: 48px;
+    min-height: 48px;
+}
+div.comment-form {
+    margin: 16px 0px 16px 32px;
+}
+.grade{
+    margin-top: 10%;
+    color: blue;
+}
+.grade-gra{
+    display: inline;
+}
+.grade-num{
+    display: inline;
+}
+.type-video{
+    margin-top: 10%;
+}
+.type-video-detail{
+    display: inline;
+    padding-left: 1%;
+}
+.introduce{
+    margin-top: 10%;
+}
+label{
+    padding-right:1%
+}
+form{
+    margin-left:3%
+}
+.btn-nav{
+    padding-right: 2%;
+}
+#nav-submit{
+    display: inline;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+.list-video{
+    width: 100px;
+    height: 100px;
+}
+btn-yh{
+    padding-right: 10px;
+}

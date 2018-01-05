@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Video{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='stylestyle.css')}}">
+{% endblock %}
+
+{% block page_content %}
+ <div class="row">
+            <div class="col-md-4">
+                <div class="title">
+                        <h2>{{ video.name }}</h2>
+                        <br>
+                    <img src="{{ video.picture_url}}">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="introduce">
+                    <div class="grade">
+                        <h3 class="grade-gra">评分</h3>
+                        <h4 id="grade" class="grade-num">{{ video.grade }}</h4>
+                        <hr/>
+                    </div>
+                    <div class="type-video">
+                        <h3>类型</h3>
+                        {% for tag in video.tags %}
+                            <p class="type-video-detail">{{ tag.name }}</p>
+                        {% endfor %}
+                        <hr>
+                    </div>
+                    <div class="introduce">
+                        <h3>具体介绍</h3>
+                        <p>{{ video.introduce }}</p>
+                    </div>
+{#                    <div class="star">#}
+{#                        <h3 class="star-p">评分：</h3>#}
+{#                        <ul class="rating" id="rating">#}
+{#                            <li class="rating-item" title="很不好"></li>#}
+{#                            <li class="rating-item" title="不好"></li>#}
+{#                            <li class="rating-item" title="一般"></li>#}
+{#                            <li class="rating-item" title="好"></li>#}
+{#                            <li class="rating-item" title="很好"></li>#}
+{#                        </ul>#}
+{#                        <script>#}
+{#                            var num = 2;#}
+{#                            $rating = $('#rating')#}
+{#                            $item = $rating.find('.rating-item');#}
+{#                            var lightOn = function(num){#}
+{#                                $item.each(function (index) {#}
+{#                                    if(index < num){#}
+{#                                        $(this).css('background-position','0 -40px');#}
+{#                                    }else{#}
+{#                                        $(this).css('background-position','0 0');#}
+{#                                    }#}
+{#                                })#}
+{#                            };#}
+{#                            lightOn(num);#}
+{#                            $item.on('mouseover',function(){#}
+{#                                lightOn($(this).index()+1);#}
+{#                            }).on('click',function(){#}
+{#                                num = $(this).index()+1;#}
+{#                            })#}
+{#                            $rating.on('mouseout',function () {#}
+{#                                lightOn(num);#}
+{#                            })#}
+{#                        </script>#}
+{#                    </div>#}
+                </div>
+            </div>
+            <div class="col-md-4">
+                广告位
+            </div>
+ </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>精彩评论</h3>
+                     {% include '_comments.html' %}
+                </div>
+            </div>
+        </div>
+
+
+
+
+{% endblock %}
